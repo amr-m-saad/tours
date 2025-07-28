@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة النور للتخليص الجمركي</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #0056b3;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .lang-switch {
+            float: left;
+            margin-left: 20px;
+        }
+        section {
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .services, .about, .contact {
+            margin-bottom: 40px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .lang-toggle {
+            text-align: center;
+            margin: 20px;
+        }
+        .lang-toggle button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('ar'); // default
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1 data-lang="ar">شركة النور للتخليص الجمركي</h1>
+        <h1 data-lang="en">Al Nour Customs Clearance</h1>
+        <p data-lang="ar">خبرة أكثر من 20 سنة في خدمات التخليص الجمركي والاستيراد والتصدير</p>
+        <p data-lang="en">Over 20 years of experience in customs clearance, import and export services</p>
+    </header>
+
+    <div class="lang-toggle">
+        <button onclick="setLanguage('ar')">العربية</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
+
+    <nav>
+        <a href="#about" data-lang="ar">من نحن</a>
+        <a href="#about" data-lang="en">About Us</a>
+        <a href="#services" data-lang="ar">خدماتنا</a>
+        <a href="#services" data-lang="en">Services</a>
+        <a href="#contact" data-lang="ar">اتصل بنا</a>
+        <a href="#contact" data-lang="en">Contact</a>
+    </nav>
+
+    <section class="about" id="about">
+        <h2 data-lang="ar">من نحن</h2>
+        <h2 data-lang="en">About Us</h2>
+        <p data-lang="ar">شركة النور تقدم خدمات التخليص الجمركي بأعلى مستوى من الكفاءة والدقة، ونعمل مع جميع الموانئ والمطارات داخل جمهورية مصر العربية.</p>
+        <p data-lang="en">Al Nour provides high-level customs clearance services with precision and efficiency, working with all ports and airports across Egypt.</p>
+    </section>
+
+    <section class="services" id="services">
+        <h2 data-lang="ar">خدماتنا</h2>
+        <h2 data-lang="en">Our Services</h2>
+        <ul data-lang="ar">
+            <li>تخليص جمركي للواردات والصادرات</li>
+            <li>إجراءات الإفراج الجمركي السريع</li>
+            <li>استشارات جمركية</li>
+            <li>نقل وشحن البضائع</li>
+            <li>التعامل مع الجهات الحكومية والمعنية</li>
+        </ul>
+        <ul data-lang="en">
+            <li>Import and export customs clearance</li>
+            <li>Fast customs release procedures</li>
+            <li>Customs consultancy</li>
+            <li>Goods transport and shipping</li>
+            <li>Dealing with government and relevant authorities</li>
+        </ul>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 data-lang="ar">اتصل بنا</h2>
+        <h2 data-lang="en">Contact Us</h2>
+        <p data-lang="ar">العنوان: القاهرة، شارع صلاح سالم، برج النور الإداري</p>
+        <p data-lang="en">Address: Cairo, Salah Salem Street, Al Nour Administrative Tower</p>
+        <p data-lang="ar">الهاتف: 01001234567</p>
+        <p data-lang="en">Phone: 01001234567</p>
+        <p data-lang="ar">البريد الإلكتروني: info@elnourcustoms.com</p>
+        <p data-lang="en">Email: info@elnourcustoms.com</p>
+
+        <form action="mailto:info@elnourcustoms.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="الاسم الكامل / Full Name" required>
+            <input type="email" name="email" placeholder="البريد الإلكتروني / Email" required>
+            <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا / Write your message here" required></textarea>
+            <button type="submit" data-lang="ar">أرسل الرسالة</button>
+            <button type="submit" data-lang="en">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p data-lang="ar">&copy; 2025 شركة النور للتخليص الجمركي - جميع الحقوق محفوظة</p>
+        <p data-lang="en">&copy; 2025 Al Nour Customs Clearance - All rights reserved</p>
+    </footer>
+</body>
+</html>
